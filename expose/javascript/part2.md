@@ -72,3 +72,6 @@ E) `false` because `true` is type casted to an integer (`1`), so the comparison 
 F) `true` because first, the `Boolean(2)` expression returns `true` (because an integer not 0 is `true` as a boolean), so the comparison is `true === true`, which is `true`.
 
 **Question 15**: The `==` operator type casts the operands to the same type in order to perform the comparison (i.e. `'2'` to `2` in order to compare against an integer), while the `===` operator does not type cast and instead returns `false` immediately if the types differ.
+
+**Question 17**: The result will be `[2, 4, 6]`. First, `modifyArray` creates a new array `newArr`, then loops around each item in the parameter `array`. For each item `array[i]`, the callback is run with `array[i]` as the parameter. Since the `callback` is the `doSomething` function, the callback will return `array[i] * 2` since `array[i]` is passed in as the `num` parameter. Thus, the value pushed to the array will be `array[i] * 2`, which results in the `newArr` containing double the value of each item in the original array.
+
