@@ -26,3 +26,49 @@ Line 12 will print `3` because the constant `length` was defined at the top of t
 
 **Question 11**:
 This function will return `[50, 100, 150]` because the constant `discounted` is defined at the top of the function, so the pointer to the array is constant and in the scope of the function. In the for loop, the array is pushed with each item's discounted price, which is allowed because the pointer to the array does not change. Thus, the array will have the discounted price of each item in the array.
+
+**Question 12**:
+
+A) `student.name`
+
+B) `student['Grad Year']`
+
+C) `student.greeting()`
+
+D) `student['Favorite Teacher'].name`
+
+E) `student.courseLoad[0]`
+
+**Question 13**:
+
+A) `'32'` because the `2` was type casted to a string (`'2'`) in order to be concatenated to `'3'`.
+
+B) `1` because the `'3'` was type casted to an integer (`3`) in order for `2` to be subtracted from it.
+
+C) `3` because the `null` was type casted to an integer (`0`) in order to be added to `3`.
+
+D) `3null` because the `null` was type casted to a string (`'null'`) in order to be concatenated to `'3'`.
+
+E) `4` because the `true` was type casted to an integer (`1`) in order to be added to `3`.
+
+F) `0` because in order for the addition operation to work, `false` must be type casted to an integer (`0`) and `null` must be type casted to an integer (`0`), so their sum is `0`.
+
+G) `'3undefined'` because the `undefined` was type casted to a string (`'undefined'`) in order to be concatenated to `'3'`.
+
+H) `NaN` because in order for the subtraction operation to work, `'3'` must be type casted to an integer (`3`) and `undefined` must be type casted to an integer (`NaN`), so their subtraction is `NaN`.
+
+**Question 14**:
+
+A) `true` because the `'2'` was type casted to an integer (`2`), so the comparison is `2 > 1`, which is `true`.
+
+B) `false` because string comparison checks the unicode value of each string, character by character. Thus, since `'2'` has a higher unicode value than `'1'`, `'2'` is more than `'12'` and the comparison is `false`.
+
+C) `true` because `'2'` is type casted to an integer (`2`), so the comparison is `2 == 2`, which is `true`.
+
+D) `false` because `===` does not perform type casting, and since `2` and `'2'` are different types, the comparison returns `false`.
+
+E) `false` because `true` is type casted to an integer (`1`), so the comparison is `1 == 2`, which is `false`.
+
+F) `true` because first, the `Boolean(2)` expression returns `true` (because an integer not 0 is `true` as a boolean), so the comparison is `true === true`, which is `true`.
+
+**Question 15**: The `==` operator type casts the operands to the same type in order to perform the comparison (i.e. `'2'` to `2` in order to compare against an integer), while the `===` operator does not type cast and instead returns `false` immediately if the types differ.
