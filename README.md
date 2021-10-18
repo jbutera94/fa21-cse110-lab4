@@ -1,1 +1,2 @@
 # CSE 110: Lab 4 (Justin Butera)
+### NOTE: The `diagram.drawio.png` file has a black background (at least for me) when viewed on GitHub, so [this link](https://raw.githubusercontent.com/jbutera94/fa21-cse110-lab4/master/explore/diagramming/diagram.drawio.png) might be better to view it (it is the same as going to the "Download" button on the image on GitHub).
