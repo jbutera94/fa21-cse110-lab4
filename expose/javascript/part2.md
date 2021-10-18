@@ -55,13 +55,13 @@ F) `0` because in order for the addition operation to work, `false` must be type
 
 G) `'3undefined'` because the `undefined` was type casted to a string (`'undefined'`) in order to be concatenated to `'3'`.
 
-H) `NaN` because in order for the subtraction operation to work, `'3'` must be type casted to an integer (`3`) and `undefined` must be type casted to an integer (`NaN`), so their subtraction is `NaN`.
+H) `NaN` because in order for the subtraction operation to work, `'3'` must be type casted to an integer (`3`) and `undefined` must be type casted to an integer (`NaN`), so their difference is `NaN`.
 
 **Question 14**:
 
 A) `true` because the `'2'` was type casted to an integer (`2`), so the comparison is `2 > 1`, which is `true`.
 
-B) `false` because string comparison checks the unicode value of each string, character by character. Thus, since `'2'` has a higher unicode value than `'1'`, `'2'` is more than `'12'` and the comparison is `false`.
+B) `false` because string comparison checks the unicode value of each string, character by character. Thus, since `'2'` has a higher unicode value than `'1'`, `'2'` is greater than `'12'` and the comparison is `false`.
 
 C) `true` because `'2'` is type casted to an integer (`2`), so the comparison is `2 == 2`, which is `true`.
 
@@ -69,10 +69,10 @@ D) `false` because `===` does not perform type casting, and since `2` and `'2'` 
 
 E) `false` because `true` is type casted to an integer (`1`), so the comparison is `1 == 2`, which is `false`.
 
-F) `true` because first, the `Boolean(2)` expression returns `true` (because an integer not 0 is `true` as a boolean), so the comparison is `true === true`, which is `true`.
+F) `true` because first, the `Boolean(2)` expression returns `true` (because an non-0 integer is `true` as a boolean), so the comparison is `true === true`, which is `true`.
 
 **Question 15**: The `==` operator type casts the operands to the same type in order to perform the comparison (i.e. `'2'` to `2` in order to compare against an integer), while the `===` operator does not type cast and instead returns `false` immediately if the types differ.
 
 **Question 17**: The result will be `[2, 4, 6]`. First, `modifyArray` creates a new array `newArr`, then loops around each item in the parameter `array`. For each item `array[i]`, the callback is run with `array[i]` as the parameter. Since the `callback` is the `doSomething` function, the callback will return `array[i] * 2` since `array[i]` is passed in as the `num` parameter. Thus, the value pushed to the array will be `array[i] * 2`, which results in the `newArr` containing double the value of each item in the original array.
 
-**Question 19**: The result will be `1 4 3 2` because `1` will be logged immediately (line 2), then the `setTimeout` calls (lines 3-4) will delay their respective logs by approximately 0 or 1000 milliseconds. Immediately after, `4` will be logged, so `4` will be outputed next. Then, the 0 milliseconds `setTimeout` (line 4) will log before the 1000 milliseconds `setTimeout`, so they will output as `3` and then `2` (after 1 second).
+**Question 19**: The result will be `1 4 3 2` because `1` will be logged immediately (line 2), then the `setTimeout` calls (lines 3-4) will delay their respective logs by approximately 0 or 1000 milliseconds. Immediately after, `4` will be logged next. Then, the 0 milliseconds `setTimeout` (line 4) will log before the 1000 milliseconds `setTimeout`, so they will output as `3` and then `2` (after 1 second).
